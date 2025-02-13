@@ -1,13 +1,17 @@
 import { useState } from "react";
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
+  const navigate = useNavigate();
+
   return (
-    <section className="grid text-center h-screen items-center p-8">
+    <div className="bg-gray-100 h-screen flex items-center justify-center"> 
+    <section className="grid text-center bg-white shadow-md max-w-md w-full rounded-2xl items-center p-8">
       <div>
         <Typography variant="h3" color="blue-gray" className="mb-2">
           Sign In
@@ -99,13 +103,14 @@ export function Login() {
             className="!mt-4 text-center font-normal"
           >
             Not registered?{" "}
-            <a href="#" className="font-medium text-gray-900">
+            <a onClick={() => navigate('/register')} className="font-medium text-gray-900">
               Create account
             </a>
           </Typography>
         </form>
       </div>
     </section>
+    </div>
   );
 }
 
