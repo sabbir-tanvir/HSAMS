@@ -1,9 +1,8 @@
 import { useState } from "react";
-
 import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 
-export function Basic() {
+export function Login() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
@@ -67,7 +66,7 @@ export function Basic() {
               }
             />
           </div>
-          <Button color="gray" size="lg" className="mt-6" fullWidth>
+          <Button  color="gray" size="lg" className="mt-6 cursor-pointer" fullWidth>
             sign in
           </Button>
           <div className="!mt-4 flex justify-end">
@@ -76,15 +75,15 @@ export function Basic() {
               href="#"
               color="blue-gray"
               variant="small"
-              className="font-medium"
+              className="font-medium text-red-700"
             >
-              Forgot password
+              Forgot password?
             </Typography>
           </div>
           <Button
             variant="outlined"
             size="lg"
-            className="mt-6 flex h-12 items-center justify-center gap-2"
+            className=" cursor-pointer mt-6 flex h-12 items-center justify-center gap-2"
             fullWidth
           >
             <img
@@ -110,4 +109,4 @@ export function Basic() {
   );
 }
 
-export default Basic;
+export default Login;
