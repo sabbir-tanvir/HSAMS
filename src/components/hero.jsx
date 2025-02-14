@@ -3,6 +3,7 @@ import React, { use } from 'react';
 // If you have an image, you can import it:
 import heroImage from '../assets/m.png';
 import Login from './login';
+import RegisterUser from './registration';
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
@@ -56,7 +57,7 @@ const Hero = () => {
                             <button onClick={() => navigate('/')} className="text-white hover:text-black transition-colors">
                                 Sign In
                             </button>
-                            <button  className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-900 transition-colors">
+                            <button onClick={() => navigate('/register')}  className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-900 transition-colors">
                                 Sign Up
                             </button>
                         </div>
