@@ -13,7 +13,7 @@ export function Hero() {
                 <div className="flex flex-col w-5/6   text-center justify-center">
                     <GradientText
                         colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                        animationSpeed={3}
+                        animationSpeed={5}
                         showBorder={false}
                         className="custom-class"
                     >
