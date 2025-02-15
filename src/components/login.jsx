@@ -70,7 +70,7 @@ export function Login() {
               }
             />
           </div>
-          <Button onClick={() => navigate('/home')} color="gray" size="lg" className="mt-6 cursor-pointer" fullWidth>
+          <Button onClick={() => navigate('/dashbord')} color="gray" size="lg" className="mt-6 cursor-pointer" fullWidth>
             sign in
           </Button>
           <div className="!mt-4 flex justify-end">

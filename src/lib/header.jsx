@@ -32,7 +32,7 @@ export function Header() {
                 <div className="w-3/6 flex justify-end items-center text-right">
                     {/* Auth Buttons (Sign In / Sign Up) */}
                     <div className="hidden md:flex items-center space-x-4">
-                        <button onClick={() => navigate('/')} className="text-white hover:text-black transition-colors">
+                        <button onClick={() => navigate('/login')} className="text-white hover:text-black transition-colors">
                             Sign In
                         </button>
                         <button onClick={() => navigate('/register')} className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-900 transition-colors">
