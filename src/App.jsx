@@ -6,6 +6,7 @@ import Home from './components/home' // Correctly import the Hero component
 import Payment from './components/payment'
 import  Footer  from './lib/footer'
 import { Canvas } from './lib/canvas' // Correct the import path
+import { Dashbord } from './components/dashbord'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/canvas" element={<Canvas />} />
+          <Route path="/dashbord" element={<Dashbord />} />
         </Routes>
       </div>
     </Router>
