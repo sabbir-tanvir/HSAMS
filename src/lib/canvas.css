@@ -1,0 +1,14 @@
+
+
+ 
+  /* body {
+
+    background: radial-gradient(circle, #182738, #090a0f);
+  } */
+  
+  canvas {
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensure  the width */
+    height: 100%; /* Ensure canvas fully covers the height */
+  }
