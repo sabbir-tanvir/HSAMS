@@ -11,6 +11,7 @@ const UserProfileModal = ({ toggleModal }) => {
       { id: 1, action: 'Completed a project', timestamp: '2 hours ago' },
       { id: 2, action: 'Submitted a pull request', timestamp: '1 day ago' },
       { id: 3, action: 'Attended a meeting', timestamp: '3 days ago' },
+      { id: 4, action: 'Commented on a ticket', timestamp: '1 week ago' },
     ],
   };
 
