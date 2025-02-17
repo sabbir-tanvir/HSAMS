@@ -8,7 +8,7 @@ import  Footer  from './lib/footer'
 import { Canvas } from './lib/canvas' // Correct the import path
 import { Dashbord } from './components/dashbord'
 import './styles.css';
-import Booking from './components/booking'
+
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
           <Route path="/footer" element={<Footer />} />
           <Route path="/canvas" element={<Canvas />} />
           <Route path="/dashbord" element={<Dashbord />} />
-          <Route path="/booking" element={<Booking />} />
+
         </Routes>
       </div>
     </Router>

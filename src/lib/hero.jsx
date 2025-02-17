@@ -1,12 +1,17 @@
 import React from "react";
 import heroImage from '../assets/m.png';
-import GradientText from './GradientText'
+import GradientText from './GradientText';
+import { FaTimes } from 'react-icons/fa'
+import { useNavigate } from "react-router-dom";
+
 
 import { useState } from "react";
 
 
 export function Hero() {
     const [bookingType, setBookingType] = useState(null)
+    const navigate = useNavigate();
+    
 
     const hospitalInfo = {
         name: "City General Hospital",
@@ -24,7 +29,7 @@ export function Hero() {
     }
 
     const OfflineBookingForm = ({ toggleModal }) => (
-        <div className="fixed inset-0 overflow-y-auto h-full w-full z-50 bg-black bg-opacity-50" onClick={toggleModal}>
+        <div className="fixed inset-0 overflow-y-auto h-full w-full z-50 backdrop-blur-xs " onClick={toggleModal}>
             <div className="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between items-center mb-4">
@@ -64,7 +69,7 @@ export function Hero() {
     )
 
     const OnlineBookingForm = ({ toggleModal }) => (
-        <div className="fixed inset-0 overflow-y-auto h-full w-full z-50 bg-black bg-opacity-50" onClick={toggleModal}>
+        <div className="fixed inset-0 overflow-y-auto h-full w-full z-50 backdrop-blur-xs" onClick={toggleModal}>
             <div className="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white"
                 onClick={(e) => e.stopPropagation()}>
                 <div className="flex justify-between items-center mb-4">
@@ -99,24 +104,8 @@ export function Hero() {
                             <option>Pediatrics</option>
                         </select>
                     </div>
-                    <div className="border-t pt-4">
-                        <h4 className="font-medium mb-2">Payment Details</h4>
-                        <div>
-                            <label className="block text-sm font-medium mb-1">Card Number</label>
-                            <input type="text" className="w-full p-2 border rounded" placeholder="**** **** **** ****" />
-                        </div>
-                        <div className="grid grid-cols-2 gap-4 mt-2">
-                            <div>
-                                <label className="block text-sm font-medium mb-1">Expiry Date</label>
-                                <input type="text" className="w-full p-2 border rounded" placeholder="MM/YY" />
-                            </div>
-                            <div>
-                                <label className="block text-sm font-medium mb-1">CVV</label>
-                                <input type="text" className="w-full p-2 border rounded" placeholder="***" />
-                            </div>
-                        </div>
-                    </div>
-                    <button type="submit" className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+
+                    <button type="submit" onClick={() => navigate('../payment')} className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
                         Pay and Book Consultation
                     </button>
                 </form>
@@ -124,7 +113,7 @@ export function Hero() {
         </div>
     )
 
-    const toggleModal = () => setBookingType();
+    const toggleModal = () => setBookingType(null);
 
     return (
         <main className="relative z-10 pt-24">
