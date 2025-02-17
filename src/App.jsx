@@ -9,6 +9,7 @@ import { Canvas } from './lib/canvas' // Correct the import path
 import { Dashbord } from './components/dashbord'
 import './styles.css';
 
+
 function App() {
   return (
     <Router>

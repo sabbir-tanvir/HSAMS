@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from '../assets/m.png';
 import GradientText from './GradientText'
+import  DayScheduleButton  from '../lib/dayschedule';
 
 
 
@@ -50,6 +51,10 @@ export function Hero() {
                             Search
                         </button>
                     </form>
+                    <div>
+                    <DayScheduleButton />
+
+                    </div>
 
                 </div>
 
