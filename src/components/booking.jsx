@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { FaTimes } from 'react-icons/fa'
-import './App.css'
 
-function App() {
+function Booking() {
   const [bookingType, setBookingType] = useState(null)
 
   const hospitalInfo = {
@@ -121,9 +120,11 @@ function App() {
     </div>
   )
 
-  const toggleModal = () => setBookingType(null)
+
+  const toggleModal = () => setBookingType();
 
   return (
+
     <div className={`min-h-screen bg-gray-100 p-8 ${bookingType ? 'overflow-hidden' : ''}`}>
       <div className="max-w-3xl mx-auto">
         {/* Modal Forms */}
@@ -134,21 +135,11 @@ function App() {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-2xl font-bold mb-4">{hospitalInfo.name}</h2>
           <div className="space-y-4">
-            <p className="text-gray-600">{hospitalInfo.description}</p>
             <div>
               <h3 className="font-bold mb-2">Contact Information:</h3>
               <p>Address: {hospitalInfo.address}</p>
-              <p>Phone: {hospitalInfo.phone}</p>
-              <p>Email: {hospitalInfo.email}</p>
             </div>
-            <div>
-              <h3 className="font-bold mb-2">Our Services:</h3>
-              <ul className="list-disc pl-5">
-                {hospitalInfo.services.map((service, index) => (
-                  <li key={index}>{service}</li>
-                ))}
-              </ul>
-            </div>
+
             <div className="flex gap-4 mt-6">
               <button
                 onClick={() => setBookingType('online')}
@@ -170,4 +161,4 @@ function App() {
   )
 }
 
-export default App
+export default Booking;
