@@ -60,6 +60,15 @@ export function Hero() {
                             <option>Pediatrics</option>
                         </select>
                     </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-1">Doctors</label>
+                        <select className="w-full p-2 border rounded">
+                            <option id="">Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
+                        </select>
+                    </div>
                     <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
                         Book Appointment
                     </button>
@@ -102,6 +111,15 @@ export function Hero() {
                             <option>Cardiology</option>
                             <option>Orthopedics</option>
                             <option>Pediatrics</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label className="block text-sm font-medium mb-1">Doctors</label>
+                        <select className="w-full p-2 border rounded">
+                            <option>Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
+                            <option>Dr.Sabbir Tanvir</option>
                         </select>
                     </div>
 
