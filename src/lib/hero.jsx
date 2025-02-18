@@ -66,7 +66,7 @@ export function Hero() {
                             <option id="">Dr.Sabbir Tanvir</option>
                             <option>Dr.Sabbir Tanvir</option>
                             <option>Dr.Sabbir Tanvir</option>
-                            <option>Dr.Sabbir Tanvir</option>
+
                         </select>
                     </div>
                     <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
