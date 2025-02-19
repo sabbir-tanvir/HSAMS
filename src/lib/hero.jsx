@@ -1,30 +1,22 @@
 import React, { useState } from "react";
 import heroImage from "../assets/m.png";
 import GradientText from "./GradientText";
-import { FaTimes } from "react-icons/fa";
+import { FaIdCardAlt, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-// Lucide icons and UI components
+// Heroicons for icons
 import {
-  X,
-  Calendar,
-  Phone,
-  Mail,
-  User,
-  Building2,
-  Stethoscope,
-} from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { Button } from "@/components/ui/button";
+  XMarkIcon,
+  CalendarDaysIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  UserIcon,
+  BuildingOffice2Icon,
+  HeartIcon,
+} from "@heroicons/react/24/outline";
+
+// UI components (from your own or shadcn/ui library)
+
 
 /* ----------------------- Online Booking Form ----------------------- */
 const OnlineBookingForm = ({ toggleModal }) => {
@@ -58,8 +50,8 @@ const OnlineBookingForm = ({ toggleModal }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <Card
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
+      <div
         className="w-full max-w-3xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
@@ -67,17 +59,17 @@ const OnlineBookingForm = ({ toggleModal }) => {
           <h2 className="text-2xl font-bold text-white">
             Schedule Your Consultation
           </h2>
-          <Button
+          <button
             variant="ghost"
             size="icon"
             className="h-8 w-8 rounded-full hover:bg-blue-500/20 text-white"
             onClick={toggleModal}
           >
-            <X className="h-5 w-5" />
-          </Button>
+            <XMarkIcon className="h-5 w-5" />
+          </button>
         </div>
 
-        <CardContent className="p-6">
+        <div className="p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">
@@ -86,17 +78,17 @@ const OnlineBookingForm = ({ toggleModal }) => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="name"
                     className="text-sm font-medium text-gray-700"
                   >
                     Full Name
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <User className="h-5 w-5 text-gray-400" />
+                      <UserIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="name"
                       className="pl-10 bg-white"
                       placeholder="Enter your full name"
@@ -109,17 +101,17 @@ const OnlineBookingForm = ({ toggleModal }) => {
                 </div>
 
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="email"
                     className="text-sm font-medium text-gray-700"
                   >
                     Email Address
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Mail className="h-5 w-5 text-gray-400" />
+                      <EnvelopeIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="email"
                       type="email"
                       className="pl-10 bg-white"
@@ -141,17 +133,17 @@ const OnlineBookingForm = ({ toggleModal }) => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="phone"
                     className="text-sm font-medium text-gray-700"
                   >
                     Phone Number
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Phone className="h-5 w-5 text-gray-400" />
+                      <PhoneIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="phone"
                       type="tel"
                       className="pl-10 bg-white"
@@ -165,17 +157,17 @@ const OnlineBookingForm = ({ toggleModal }) => {
                 </div>
 
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="datetime"
                     className="text-sm font-medium text-gray-700"
                   >
                     Preferred Date & Time
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Calendar className="h-5 w-5 text-gray-400" />
+                      <CalendarDaysIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="datetime"
                       type="datetime-local"
                       className="pl-10 bg-white"
@@ -196,80 +188,78 @@ const OnlineBookingForm = ({ toggleModal }) => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="department"
                     className="text-sm font-medium text-gray-700"
                   >
                     Department
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Building2 className="h-5 w-5 text-gray-400" />
+                      <BuildingOffice2Icon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Select
+                    <select
                       value={formData.department}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, department: value })
+                      onChange={(e) =>
+                        setFormData({ ...formData, department: e.target.value })
                       }
+                      className="pl-10 bg-white"
                     >
-                      <SelectTrigger className="pl-10 bg-white">
-                        <SelectValue placeholder="Select department" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {departments.map((dept) => (
-                          <SelectItem key={dept.id} value={dept.name}>
-                            {dept.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      <option value="" disabled>
+                        Select department
+                      </option>
+                      {departments.map((dept) => (
+                        <option key={dept.id} value={dept.name}>
+                          {dept.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
 
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="doctor"
                     className="text-sm font-medium text-gray-700"
                   >
                     Select Doctor
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Stethoscope className="h-5 w-5 text-gray-400" />
+                      <HeartIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Select
+                    <select
                       value={formData.doctor}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, doctor: value })
+                      onChange={(e) =>
+                        setFormData({ ...formData, doctor: e.target.value })
                       }
+                      className="pl-10 bg-white"
                     >
-                      <SelectTrigger className="pl-10 bg-white">
-                        <SelectValue placeholder="Choose your doctor" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {doctors.map((doc) => (
-                          <SelectItem key={doc.id} value={doc.name}>
-                            {doc.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      <option value="" disabled>
+                        Choose your doctor
+                      </option>
+                      {doctors.map((doc) => (
+                        <option key={doc.id} value={doc.name}>
+                          {doc.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-4">
-              <Button
+              <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 Book Consultation
-              </Button>
+              </button>
             </div>
           </form>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };
@@ -305,8 +295,8 @@ const OfflineBookingForm = ({ toggleModal }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <Card
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
+      <div
         className="w-full max-w-3xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
@@ -314,16 +304,16 @@ const OfflineBookingForm = ({ toggleModal }) => {
           <h2 className="text-2xl font-bold text-white">
             Schedule Your Appointment
           </h2>
-          <Button
+          <button
             variant="ghost"
             size="icon"
             className="h-8 w-8 rounded-full hover:bg-blue-500/20 text-white"
             onClick={toggleModal}
           >
-            <X className="h-5 w-5" />
-          </Button>
+            <XMarkIcon className="h-5 w-5" />
+          </button>
         </div>
-        <CardContent className="p-6">
+        <div className="p-6">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">
@@ -331,17 +321,17 @@ const OfflineBookingForm = ({ toggleModal }) => {
                 Personal Information
               </h3>
               <div className="relative">
-                <Label
+                <label
                   htmlFor="name"
                   className="text-sm font-medium text-gray-700"
                 >
                   Full Name
-                </Label>
+                </label>
                 <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <User className="h-5 w-5 text-gray-400" />
+                    <UserIcon className="h-5 w-5 text-gray-400" />
                   </div>
-                  <Input
+                  <input
                     id="name"
                     className="pl-10 bg-white"
                     placeholder="Enter your full name"
@@ -361,17 +351,17 @@ const OfflineBookingForm = ({ toggleModal }) => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="phone"
                     className="text-sm font-medium text-gray-700"
                   >
                     Phone Number
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Phone className="h-5 w-5 text-gray-400" />
+                      <PhoneIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="phone"
                       type="tel"
                       className="pl-10 bg-white"
@@ -384,17 +374,17 @@ const OfflineBookingForm = ({ toggleModal }) => {
                   </div>
                 </div>
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="date"
                     className="text-sm font-medium text-gray-700"
                   >
                     Preferred Date
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Calendar className="h-5 w-5 text-gray-400" />
+                      <CalendarDaysIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Input
+                    <input
                       id="date"
                       type="date"
                       className="pl-10 bg-white"
@@ -416,79 +406,77 @@ const OfflineBookingForm = ({ toggleModal }) => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="department"
                     className="text-sm font-medium text-gray-700"
                   >
                     Department
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Building2 className="h-5 w-5 text-gray-400" />
+                      <BuildingOffice2Icon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Select
+                    <select
                       value={formData.department}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, department: value })
+                      onChange={(e) =>
+                        setFormData({ ...formData, department: e.target.value })
                       }
+                      className="pl-10 bg-white"
                     >
-                      <SelectTrigger className="pl-10 bg-white">
-                        <SelectValue placeholder="Select department" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {departments.map((dept) => (
-                          <SelectItem key={dept.id} value={dept.name}>
-                            {dept.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      <option value="" disabled>
+                        Select department
+                      </option>
+                      {departments.map((dept) => (
+                        <option key={dept.id} value={dept.name}>
+                          {dept.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
                 <div className="relative">
-                  <Label
+                  <label
                     htmlFor="doctor"
                     className="text-sm font-medium text-gray-700"
                   >
                     Select Doctor
-                  </Label>
+                  </label>
                   <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                      <Stethoscope className="h-5 w-5 text-gray-400" />
+                      <HeartIcon className="h-5 w-5 text-gray-400" />
                     </div>
-                    <Select
+                    <select
                       value={formData.doctor}
-                      onValueChange={(value) =>
-                        setFormData({ ...formData, doctor: value })
+                      onChange={(e) =>
+                        setFormData({ ...formData, doctor: e.target.value })
                       }
+                      className="pl-10 bg-white"
                     >
-                      <SelectTrigger className="pl-10 bg-white">
-                        <SelectValue placeholder="Choose your doctor" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {doctors.map((doc) => (
-                          <SelectItem key={doc.id} value={doc.name}>
-                            {doc.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                      <option value="" disabled>
+                        Choose your doctor
+                      </option>
+                      {doctors.map((doc) => (
+                        <option key={doc.id} value={doc.name}>
+                          {doc.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="pt-4">
-              <Button
+              <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 Book Appointment
-              </Button>
+              </button>
             </div>
           </form>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </div>
   );
 };
