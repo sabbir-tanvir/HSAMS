@@ -49,12 +49,10 @@ const OnlineBookingForm = ({ toggleModal }) => {
     // You can add navigation or further processing here
   };
 
-  const navigate = useNavigate();
-
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
       <div
-        className="w-full max-w-3xl rounded-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
+        className="w-full max-w-3xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-t-lg">
@@ -86,13 +84,13 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Full Name
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
-                    <div className="absolute justify-center inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <div className="mt-1 relative rounded-md shadow-sm">
+                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <UserIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="name"
-                      className="pl-10 mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={(e) =>
@@ -109,14 +107,14 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Email Address
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <EnvelopeIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="email"
                       type="email"
-                      className="pl-10 mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       placeholder="your.email@example.com"
                       value={formData.email}
                       onChange={(e) =>
@@ -141,14 +139,14 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Phone Number
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <PhoneIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="phone"
                       type="tel"
-                      className="pl-10 mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       placeholder="Enter your phone number"
                       value={formData.phone}
                       onChange={(e) =>
@@ -165,14 +163,14 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Preferred Date & Time
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <CalendarDaysIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="datetime"
                       type="datetime-local"
-                      className="pl-10 mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       value={formData.datetime}
                       onChange={(e) =>
                         setFormData({ ...formData, datetime: e.target.value })
@@ -196,7 +194,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Department
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <BuildingOffice2Icon className="h-5 w-5 text-gray-400" />
                     </div>
@@ -205,7 +203,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
                       onChange={(e) =>
                         setFormData({ ...formData, department: e.target.value })
                       }
-                      className="pl-10 mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                     >
                       <option value="" disabled>
                         Select department
@@ -226,7 +224,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
                   >
                     Select Doctor
                   </label>
-                  <div className="mt-1 h-9 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <HeartIcon className="h-5 w-5 text-gray-400" />
                     </div>
@@ -235,7 +233,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
                       onChange={(e) =>
                         setFormData({ ...formData, doctor: e.target.value })
                       }
-                      className="pl-10  mt-1 w-3xs bg-white"
+                      className="pl-10 bg-white"
                     >
                       <option value="" disabled>
                         Choose your doctor
@@ -254,10 +252,9 @@ const OnlineBookingForm = ({ toggleModal }) => {
             <div className="pt-4">
               <button
                 type="submit"
-                onClick={() => navigate('/payment')}
                 className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
               >
-                Pay to Book Appointment
+                Book Consultation
               </button>
             </div>
           </form>
@@ -300,7 +297,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
       <div
-        className="w-full max-w-3xl rounded-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
+        className="w-full max-w-3xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-t-lg">
@@ -310,7 +307,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
           <button
             variant="ghost"
             size="icon"
-            className="h-8 w-8 items-center justify-center rounded-full hover:bg-blue-500/20 text-white"
+            className="h-8 w-8 rounded-full hover:bg-blue-500/20 text-white"
             onClick={toggleModal}
           >
             <XMarkIcon className="h-5 w-5" />
@@ -330,13 +327,13 @@ const OfflineBookingForm = ({ toggleModal }) => {
                 >
                   Full Name
                 </label>
-                <div className="mt-1 h-10 relative rounded-md shadow-sm">
+                <div className="mt-1 relative rounded-md shadow-sm">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <UserIcon className="h-5 w-5 text-gray-400" />
                   </div>
                   <input
                     id="name"
-                    className="pl-24 mt-1.5 items-center justify-center self-center w-90  bg-white"
+                    className="pl-10 bg-white"
                     placeholder="Enter your full name"
                     value={formData.name}
                     onChange={(e) =>
@@ -360,14 +357,14 @@ const OfflineBookingForm = ({ toggleModal }) => {
                   >
                     Phone Number
                   </label>
-                  <div className="mt-1 h-10 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <PhoneIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="phone"
                       type="tel"
-                      className="pl-10 mt-1.5 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       placeholder="Enter your phone number"
                       value={formData.phone}
                       onChange={(e) =>
@@ -383,14 +380,14 @@ const OfflineBookingForm = ({ toggleModal }) => {
                   >
                     Preferred Date
                   </label>
-                  <div className="mt-1 h-10 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <CalendarDaysIcon className="h-5 w-5 text-gray-400" />
                     </div>
                     <input
                       id="date"
                       type="date"
-                      className="pl-10 mt-1.5 w-3xs bg-white"
+                      className="pl-10 bg-white"
                       placeholder="Select a date"
                       value={formData.date}
                       onChange={(e) =>
@@ -415,7 +412,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
                   >
                     Department
                   </label>
-                  <div className="mt-1 h-10 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <BuildingOffice2Icon className="h-5 w-5 text-gray-400" />
                     </div>
@@ -424,7 +421,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
                       onChange={(e) =>
                         setFormData({ ...formData, department: e.target.value })
                       }
-                      className="pl-10 mt-1.5 w-3xs bg-white"
+                      className="pl-10 bg-white"
                     >
                       <option value="" disabled>
                         Select department
@@ -444,7 +441,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
                   >
                     Select Doctor
                   </label>
-                  <div className="mt-1 h-10 relative rounded-md shadow-sm">
+                  <div className="mt-1 relative rounded-md shadow-sm">
                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                       <HeartIcon className="h-5 w-5 text-gray-400" />
                     </div>
@@ -453,7 +450,7 @@ const OfflineBookingForm = ({ toggleModal }) => {
                       onChange={(e) =>
                         setFormData({ ...formData, doctor: e.target.value })
                       }
-                      className="pl-10 mt-1.5 w-3xs bg-white"
+                      className="pl-10 bg-white"
                     >
                       <option value="" disabled>
                         Choose your doctor
