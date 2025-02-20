@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import { Hospital } from 'lucide-react';
 
 const testimonials = [
   {
@@ -49,7 +50,7 @@ const Review = () => {
 
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our User Say</h2>
           <p className="text-lg text-gray-600">Discover why companies trust us for their needs</p>
         </div>
 
