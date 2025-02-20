@@ -4,6 +4,7 @@ import { Hero } from '../lib/hero';
 import { Footer } from '../lib/footer';
 import { About } from '../lib/about';
 import Canvas from '../lib/canvas'; // Correct import path
+import Review from '../lib/review'; // Correct import path
 
 
 const Home = () => {
@@ -17,6 +18,9 @@ const Home = () => {
             <div className="h-screen">
                 <Canvas />
                 <About />
+            </div>
+            <div className="h-screen">
+                <Review />
             </div>
 
             <div className="items-end">
