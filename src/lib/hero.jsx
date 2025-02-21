@@ -3,6 +3,7 @@ import heroImage from "../assets/m.png";
 import GradientText from "./GradientText";
 import { FaIdCardAlt, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Canvas from '../lib/canvas'; // Correct import path
 
 // Heroicons for icons
 import {
@@ -580,6 +581,9 @@ export function Hero() {
 
         {/* Right Column: Hero Image */}
         <div className="flex justify-center items-center md:mt-0">
+          <div className="absolute overflow-hidden top-0 right-0 w-1/2 h-full">
+              <Canvas />
+          </div>
           <img src={heroImage} alt="Hero" className="w-[600px] h-auto" />
         </div>
       </section>

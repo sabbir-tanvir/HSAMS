@@ -3,7 +3,7 @@ import Header2 from '../lib/header2';
 import { Hero } from '../lib/hero';
 import { Footer } from '../lib/footer';
 import { About } from '../lib/about';
-import Canvas from '../lib/canvas'; // Correct import path
+
 import Review from '../lib/review'; // Correct import path
 
 
@@ -17,7 +17,7 @@ export function Dashbord() {
                 <Hero />
             </div>
             <div className="h-screen">
-                <Canvas />
+
                 <About />
             </div>
             <div className="h-screen">
