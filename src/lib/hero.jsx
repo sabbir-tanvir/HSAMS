@@ -536,12 +536,26 @@ export function Hero() {
               placeholder="Hospital Location"
               className="w-full sm:w-auto flex-1 border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-            <button
+            {/* <button
               type="submit"
               className="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition-colors w-full sm:w-auto"
             >
               Search
+            </button> */}
+
+            {/* <button class="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-indigo-100 rounded hover:bg-white group py-1.5 px-2.5">
+              <span class="w-56 h-48 rounded bg-indigo-600 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+              <span class="relative w-full text-left text-indigo-600 transition-colors duration-300 ease-in-out group-hover:text-white">Button Hover</span>
+            </button> */}
+
+            <button class="relative inline-block font-medium group py-2 px-5 ">
+              <span class="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span class="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+              <span class="relative text-indigo-600 ">. Search .</span>
             </button>
+
+
+
           </form>
 
           <div className={`${bookingType ? "overflow-hidden" : ""}`}>
@@ -561,18 +575,31 @@ export function Hero() {
                 </h2>
                 <p className="text-gray-700 mb-4">{hospitalInfo.address}</p>
                 <div className="flex gap-4 justify-center">
-                  <button
-                    onClick={() => setBookingType("online")}
+                  {/* <button
+                    
                     className="flex-1 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition"
-                  >
-                    Online Booking
+                  > */}
+                  <button onClick={() => setBookingType("online")} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span className="absolute inset-0 w-full h-full bg-white border border-red-600 group-hover:bg-red-50"></span>
+                    <span className="relative text-red-600 ">Online Booking</span>
                   </button>
-                  <button
+                  {/* Online Booking
+                  </button> */}
+                  {/* <button
                     onClick={() => setBookingType("offline")}
                     className="flex-1 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
                   >
                     Offline Booking
+                  </button> */}
+                  <button onClick={() => setBookingType("offline")} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+                    <span className="relative text-indigo-600 ">Offline Booking</span>
                   </button>
+
+
+
                 </div>
               </div>
             </div>
@@ -582,7 +609,7 @@ export function Hero() {
         {/* Right Column: Hero Image */}
         <div className="flex justify-center items-center md:mt-0">
           <div className="absolute overflow-hidden top-0 right-0 w-1/2 h-full">
-              <Canvas />
+            <Canvas />
           </div>
           <img src={heroImage} alt="Hero" className="w-[600px] z-1 h-auto" />
         </div>
