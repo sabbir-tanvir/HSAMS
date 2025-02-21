@@ -499,7 +499,7 @@ export function Hero() {
   const toggleModal = () => setBookingType(null);
 
   return (
-    <main className="relative z-10 pt-24">
+    <main className="relative z-10 h-screen  shadow-md pt-24">
       <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ml-4 px-4 md:px-8">
         {/* Left Column: Text & Controls */}
         <div className="flex flex-col w-5/6 text-center justify-center">
@@ -584,7 +584,7 @@ export function Hero() {
           <div className="absolute overflow-hidden top-0 right-0 w-1/2 h-full">
               <Canvas />
           </div>
-          <img src={heroImage} alt="Hero" className="w-[600px] h-auto" />
+          <img src={heroImage} alt="Hero" className="w-[600px] z-1 h-auto" />
         </div>
       </section>
     </main>
