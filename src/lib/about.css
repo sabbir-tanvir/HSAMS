@@ -1,0 +1,59 @@
+
+h2.SMN_effect-12 {
+	position: relative;
+	display: inline-block;  /* This ensures the element only takes up as much space as needed */
+}
+
+h2.SMN_effect-12:before, h2.SMN_effect-12:after {
+	position: absolute;
+	width: 85px;
+	height: 4px;
+	background: #000000;
+	content: '';
+	opacity: 0;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+	pointer-events: none;
+}
+
+h2.SMN_effect-12:before {
+	top: 0;
+	left: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+
+h2.SMN_effect-12:after {
+	right: 0;
+	bottom: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-transform-origin: 100% 0;
+	-moz-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+h2.SMN_effect-12:hover:before, h2.SMN_effect-12:hover:after,
+h2.SMN_effect-12:focus:before, h2.SMN_effect-12:focus:after {
+	opacity: 1;
+}
+
+h2.SMN_effect-12:hover:before, h2.SMN_effect-12:focus:before {
+	left: 50%;
+	-webkit-transform: rotate(0deg) translateX(-50%);
+	-moz-transform: rotate(0deg) translateX(-50%);
+	transform: rotate(0deg) translateX(-50%);
+}
+
+h2.SMN_effect-12:hover:after, h2.SMN_effect-12:focus:after {
+	right: 50%;
+	-webkit-transform: rotate(0deg) translateX(50%);
+	-moz-transform: rotate(0deg) translateX(50%);
+	transform: rotate(0deg) translateX(50%);
+}

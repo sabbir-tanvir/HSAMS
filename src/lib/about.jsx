@@ -1,4 +1,5 @@
 import { Hospital } from 'lucide-react';
+import './about.css'
 
 
 export function About() {
@@ -16,11 +17,16 @@ export function About() {
 
         <div className="absolute top-5 right-8 text-purple-500">
           <Hospital size={60} />
+        </div >
+        <h2 className="SMN_effect-12 text-3xl pb-1 ">
+          <span data-hover="About">About</span>
+          </h2>
+
+        <div className='pt-3'>
+          <p className="mb-2 font-semibold text-gray-900 sm:text-xl/9">Welcome to our hospital seat finder website. We are dedicated to providing the best healthcare services to our community.</p>
+          <p className="mb-2 font-semibold text-gray-900 sm:text-xl/9">Our team of experienced professionals is here to ensure you receive the highest quality care and find available seats quickly and efficiently.</p>
+          <p className=" mb-2 font-semibold text-gray-900 sm:text-xl/9">Thank you for choosing our hospital seat finder for your healthcare needs.</p>
         </div>
-        <h2 className="text-4xl  font-merienda text-black mb-7">About Us</h2>
-        <p className="mb-2 font-semibold text-gray-900 sm:text-xl/9">Welcome to our hospital seat finder website. We are dedicated to providing the best healthcare services to our community.</p>
-        <p className="mb-2 font-semibold text-gray-900 sm:text-xl/9">Our team of experienced professionals is here to ensure you receive the highest quality care and find available seats quickly and efficiently.</p>
-        <p className=" mb-2 font-semibold text-gray-900 sm:text-xl/9">Thank you for choosing our hospital seat finder for your healthcare needs.</p>
       </div>
     </section>
   );

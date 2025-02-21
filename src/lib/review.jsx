@@ -17,7 +17,7 @@ const testimonials = [
     role: "Senior Developer",
     company: "InnovateLabs",
     image: "/api/placeholder/64/64",
-    text: "I've tried many similar solutions, but this one stands out for its intuitive design and powerful features. It's become an essential part of our daily workflow."
+    text:"hello my friend how you doing how is your day "
   },
   {
     id: 3,
