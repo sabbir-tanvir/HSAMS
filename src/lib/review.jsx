@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
+import './review.css'
 
 
 const testimonials = [
@@ -17,7 +18,7 @@ const testimonials = [
     role: "Senior Developer",
     company: "InnovateLabs",
     image: "/api/placeholder/64/64",
-    text:"hello my friend how you doing how is your day "
+    text: "hello my friend how you doing how is your day "
   },
   {
     id: 3,
@@ -78,11 +79,13 @@ const Review = () => {
 
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our User Say</h2>
+          <div className="SMN_effect-64">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our User Say</h2>
+          </div>
           <p className="text-lg text-gray-600">Discover why companies trust us for their needs</p>
-        </div>
 
-        <div 
+        </div>
+        <div
           className="relative"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
@@ -92,20 +95,19 @@ const Review = () => {
             <div className="absolute -top-6 left-8 text-purple-500">
               <Quote size={48} />
             </div>
-            
-            <div 
-              className={`flex flex-col items-center space-y-8 transition-all duration-500 ${
-                isAnimating 
-                  ? direction === 'right' 
-                    ? '-translate-x-full opacity-0' 
+
+            <div
+              className={`flex flex-col items-center space-y-8 transition-all duration-500 ${isAnimating
+                  ? direction === 'right'
+                    ? '-translate-x-full opacity-0'
                     : 'translate-x-full opacity-0'
                   : 'translate-x-0 opacity-100'
-              }`}
+                }`}
             >
               <p className="text-gray-700 text-lg md:text-xl leading-relaxed text-center mt-8">
                 {testimonials[currentIndex].text}
               </p>
-              
+
               <div className="flex items-center space-x-4">
                 <img
                   src={testimonials[currentIndex].image}
@@ -126,11 +128,10 @@ const Review = () => {
             {testimonials.map((_, index) => (
               <div
                 key={index}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  index === currentIndex 
-                    ? 'w-8 bg-purple-600' 
+                className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
+                    ? 'w-8 bg-purple-600'
                     : 'w-2 bg-purple-200'
-                }`}
+                  }`}
               ></div>
             ))}
           </div>
