@@ -499,7 +499,7 @@ export function Hero() {
   const toggleModal = () => setBookingType(null);
 
   return (
-    <main className="relative z-10 h-screen  shadow-md pt-24">
+    <main className="relative z-10 h-screen  shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] pt-24">
       <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ml-4 px-4 md:px-8">
         {/* Left Column: Text & Controls */}
         <div className="flex flex-col w-5/6 text-center justify-center">

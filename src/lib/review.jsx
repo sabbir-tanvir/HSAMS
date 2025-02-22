@@ -70,7 +70,7 @@ const Review = () => {
   };
 
   return (
-    <div className="relative min-h-screen shadow-md overflow-hidden  py-16 overflow-hidden">
+    <div className="relative min-h-screen shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] overflow-hidden  py-16 overflow-hidden">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
@@ -92,7 +92,7 @@ const Review = () => {
         >
           {/* Testimonial Card */}
           <div 
-            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all duration-500 ${
+            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all transition-transform duration-300 hover:scale-107 duration-500 ${
               isAnimating
                 ? direction === 'right'
                   ? '-translate-x-full opacity-0'
