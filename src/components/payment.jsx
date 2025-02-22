@@ -152,13 +152,13 @@ export function Payment() {
                                                 onChange={(event) => setCardExpires(event.target.value)}
                                                 containerProps={{ className: "min-w-[72px]" }}
                                                 placeholder="00/00"
-                                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                                className="!border-t-blue-gray-200 focus:!border-t-gray-900"
                                                 labelProps={{
                                                     className: "before:content-none after:content-none",
                                                 }}
                                             />
                                         </div>
-                                        <div>
+                                        <div className="w-20">
                                             <Typography
                                                 variant="small"
                                                 color="blue-gray"
@@ -168,9 +168,9 @@ export function Payment() {
                                             </Typography>
                                             <Input
                                                 maxLength={4}
-                                                containerProps={{ className: "min-w-[72px]" }}
-                                                placeholder="000"
-                                                className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+                                                containerProps={{ className: "w-full" }}
+                                                placeholder="0000"
+                                                className="!border-t-blue-gray-200 focus:!border-t-gray-900"
                                                 labelProps={{
                                                     className: "before:content-none after:content-none",
                                                 }}
