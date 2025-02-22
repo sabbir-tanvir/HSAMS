@@ -91,19 +91,20 @@ const Review = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Testimonial Card */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 ">
+          <div 
+            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all duration-500 ${
+              isAnimating
+                ? direction === 'right'
+                  ? '-translate-x-full opacity-0'
+                  : 'translate-x-full opacity-0'
+                : 'translate-x-0 opacity-100'
+            }`}
+          >
             <div className="absolute -top-6 left-8 text-purple-500">
               <Quote size={48} />
             </div>
 
-            <div
-              className={`flex flex-col items-center space-y-8 transition-all duration-500 ${isAnimating
-                  ? direction === 'right'
-                    ? '-translate-x-full opacity-0'
-                    : 'translate-x-full opacity-0'
-                  : 'translate-x-0 opacity-100'
-                }`}
-            >
+            <div className="flex flex-col items-center space-y-8">
               <p className="text-gray-700 text-lg md:text-xl leading-relaxed text-center mt-8">
                 {testimonials[currentIndex].text}
               </p>
