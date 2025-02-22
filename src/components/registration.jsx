@@ -31,6 +31,25 @@ export function RegisterUser() {
                         <Input type="password" id="password" name="password" placeholder="Enter your password" className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200" />
                     </div>
                     <div className="mb-4">
+                        <label htmlFor="pfp" className="block text-sm font-medium text-gray-700">
+                            Picture
+                            <i className="fa-solid fa-image mx-2"></i>
+                        </label>
+                        <div className="relative">
+                            <Input
+                                type="file" 
+                                id="pfp" 
+                                name="pfp"  
+                                className="w-full !border-t-blue-gray-200 focus:!border-t-primary"
+                                variant="standard"
+                                accept="image/*"
+                                containerProps={{
+                                    className: "min-w-full"
+                                }}
+                            />
+                        </div>
+                    </div>
+                    <div className="mb-4">
                         <label htmlFor="location" className="block text-sm font-medium text-gray-700">
                             Location
                             <i className="fa-solid fa-location-dot mx-2"></i>

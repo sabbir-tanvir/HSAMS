@@ -58,7 +58,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
         className="w-full max-w-3xl rounded-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-t-lg">
+        <div className="flex items-center justify-between p-6 bg-gradient-to-r from-red-700 to-red-700 rounded-t-lg">
           <h2 className="text-2xl font-bold text-white">
             Schedule Your Consultation
           </h2>
@@ -256,7 +256,7 @@ const OnlineBookingForm = ({ toggleModal }) => {
               <button
                 type="submit"
                 onClick={() => navigate('/payment')}
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                className="w-full bg-gradient-to-r from-red-500 to-red-500 hover:from-red-700 hover:to-red-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
               >
                 Pay to Book Appointment
               </button>
