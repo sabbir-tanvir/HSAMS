@@ -74,8 +74,8 @@ const Review = () => {
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
-      <div className="absolute -bottom-8 left-20 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
-      <div className="absolute -bottom-8 right-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-6000"></div>
+      {/* <div className="absolute -bottom-8 left-20 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
+      <div className="absolute -bottom-8 right-20 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-6000"></div> */}
 
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
@@ -91,7 +91,7 @@ const Review = () => {
         >
           {/* Testimonial Card */}
           <div
-            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all transition-transform duration-300 hover:scale-107 duration-500 ${isAnimating
+            className={`bg-white rounded-2xl shadow-xl p-8 min-h-75  md:p-12 relative z-10 transition-all transition-transform duration-400 hover:scale-107  ${isAnimating
                 ? direction === 'right'
                   ? '-translate-x-full opacity-0'
                   : 'translate-x-full opacity-0'
@@ -153,8 +153,12 @@ const Review = () => {
         </div>
 
         <form className="mb-6 flex flex-col items-center justify-center">
+          <div className="w-full text-left" >
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Leave a Comment</h2>
+
+          </div>
           <div className="py-2 px-4 w-full mb-4 shadow-xl rounded-lg rounded-t-lg border border-gray-300 bg-white">
-            <label htmlFor="comment" className="sr-only">Your comment</label>
+
             <textarea id="comment" rows="6"
               className="px-0 w-full mt-1 text-sm text-black border-0 focus:ring-0 focus:outline-none dark:text-black bg-white"
               placeholder="Write a comment..." required></textarea>
@@ -162,7 +166,7 @@ const Review = () => {
           <button className="relative justify-center inline-block font-medium group py-1.5 px-2.5">
             <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
             <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-            <span className="relative text-indigo-600">Offline Booking</span>
+            <span className="relative text-indigo-600">Comment</span>
           </button>
         </form>
 
