@@ -70,7 +70,7 @@ const Review = () => {
   };
 
   return (
-    <div className="relative min-h-screen shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] overflow-hidden  py-16 overflow-hidden">
+    <div className="relative min-h-screen shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] py-16">
       {/* Decorative Elements */}
       <div className="absolute top-0 left-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
       <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-100 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
@@ -83,7 +83,6 @@ const Review = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our User Say</h2>
           </div>
           <p className="text-lg text-gray-600">Discover why companies trust us for their needs</p>
-
         </div>
         <div
           className="relative"
@@ -91,14 +90,13 @@ const Review = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           {/* Testimonial Card */}
-          <div 
-            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all transition-transform duration-300 hover:scale-107 duration-500 ${
-              isAnimating
+          <div
+            className={`bg-white rounded-2xl shadow-xl p-8 md:p-12 relative z-10 transition-all transition-transform duration-300 hover:scale-107 duration-500 ${isAnimating
                 ? direction === 'right'
                   ? '-translate-x-full opacity-0'
                   : 'translate-x-full opacity-0'
                 : 'translate-x-0 opacity-100'
-            }`}
+              }`}
           >
             <div className="absolute -top-6 left-8 text-purple-500">
               <Quote size={48} />
@@ -130,15 +128,15 @@ const Review = () => {
               <div
                 key={index}
                 className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? 'w-8 bg-purple-600'
-                    : 'w-2 bg-purple-200'
+                  ? 'w-8 bg-purple-600'
+                  : 'w-2 bg-purple-200'
                   }`}
               ></div>
             ))}
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center mt-4 space-x-4">
+          <div className="flex justify-center pb-7 mt-4 space-x-4">
             <button
               onClick={handlePrevTestimonial}
               className="p-2 rounded-full bg-purple-100 text-purple-600 hover:bg-purple-200 transition-colors"
@@ -153,6 +151,21 @@ const Review = () => {
             </button>
           </div>
         </div>
+
+        <form className="mb-6 flex flex-col items-center justify-center">
+          <div className="py-2 px-4 w-full mb-4 shadow-xl rounded-lg rounded-t-lg border border-gray-300 bg-white">
+            <label htmlFor="comment" className="sr-only">Your comment</label>
+            <textarea id="comment" rows="6"
+              className="px-0 w-full mt-1 text-sm text-black border-0 focus:ring-0 focus:outline-none dark:text-black bg-white"
+              placeholder="Write a comment..." required></textarea>
+          </div>
+          <button className="relative justify-center inline-block font-medium group py-1.5 px-2.5">
+            <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+            <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+            <span className="relative text-indigo-600">Offline Booking</span>
+          </button>
+        </form>
+
       </div>
     </div>
   );

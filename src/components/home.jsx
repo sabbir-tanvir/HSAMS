@@ -17,7 +17,7 @@ const Home = () => {
             <div className=" h-screen">
                 <About />
             </div>
-            <div className="h-screen">
+            <div className="min-h-screen">
                 <Review />
             </div>
 

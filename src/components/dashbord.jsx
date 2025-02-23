@@ -20,7 +20,7 @@ export function Dashbord() {
 
                 <About />
             </div>
-            <div className="h-screen">
+            <div className="min-h-screen">
                 <Review />
             </div>
             <div className="items-end">
