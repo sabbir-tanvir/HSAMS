@@ -16,10 +16,7 @@ export default function Reset() {
                         Change Password
                     </Typography>
                     <form className="mt-4 space-y-4 lg:mt-5 md:space-y-5" action="#">
-                        <div>
-                            <label htmlFor="email" className="block mb-2 text-left text-sm font-medium  ">Your email</label>
-                            <Input type="email" name="email" id="email" placeholder="name@company.com" required />
-                        </div>
+
                         <div>
                             <label htmlFor="password" className="block mb-2 text-sm font-medium text-left ">New Password</label>
                             <Input type="password" name="password" id="password" placeholder="••••••••" className="" required />
