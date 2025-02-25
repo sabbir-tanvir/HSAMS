@@ -9,6 +9,7 @@ import { Canvas } from './lib/canvas' // Correct the import path
 import { Dashbord } from './components/dashbord'
 import './styles.css';
 import Reset from './Login/reset';
+import Send from './Login/send';
 
 
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/canvas" element={<Canvas />} />
           <Route path="/dashbord" element={<Dashbord />} />
           <Route path="/reset" element={<Reset />} />
+          <Route path="/send" element={<Send />} />
 
         </Routes>
       </div>
