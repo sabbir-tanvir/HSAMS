@@ -4,6 +4,8 @@ import GradientText from "./GradientText";
 import { FaIdCardAlt, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import Canvas from '../lib/canvas'; // Correct import path
+import { Progress, Typography } from "@material-tailwind/react";
+
 
 // Heroicons for icons
 import {
@@ -469,6 +471,26 @@ const OfflineBookingForm = ({ toggleModal }) => {
                 </div>
               </div>
             </div>
+            <div className="space-y-4">
+
+
+
+                <div className="w-full relative">
+                  <div className="mb-2 flex items-center justify-between gap-4">
+                    <Typography color="blue-gray" variant="h6">
+                      Serial
+                    </Typography>
+                    <Typography color="blue-gray"  variant="h6">
+                      10/50
+                    </Typography>
+                  </div>
+                  <Progress className=" bg-gray-200" color="blue" value={10} />
+                </div>
+
+
+
+              </div>
+
 
             <div className="pt-4">
               <button
