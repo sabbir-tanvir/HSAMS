@@ -10,6 +10,8 @@ import { Dashbord } from './components/dashbord'
 import './styles.css';
 import Reset from './Login/reset';
 import Send from './Login/send';
+import { Loginn } from './Admin/login';
+import { Manage } from './Admin/adashbord';
 
 
 
@@ -27,6 +29,8 @@ function App() {
           <Route path="/dashbord" element={<Dashbord />} />
           <Route path="/reset" element={<Reset />} />
           <Route path="/send" element={<Send />} />
+          <Route path="/admin" element={<Loginn />} />
+          <Route path="/manage" element={<Manage />} />
 
         </Routes>
       </div>
