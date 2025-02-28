@@ -3,7 +3,7 @@ import { Typography, Input, Button } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
 import { useNavigate } from "react-router-dom";
 
-export function Login() {
+export function DLogin() {
   const [passwordShown, setPasswordShown] = useState(false);
   const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
 
@@ -14,7 +14,7 @@ export function Login() {
     <section className="grid text-center bg-white shadow-md max-w-md w-full rounded-2xl items-center p-8">
       <div>
         <Typography variant="h3" color="blue-gray" className="mb-2">
-          Sign In
+          Doctor Login
         </Typography>
         <Typography className="mb-16 text-gray-600 font-normal text-[18px]">
           Enter your email and password to sign in
@@ -70,7 +70,7 @@ export function Login() {
               }
             />
           </div>
-          <Button onClick={() => navigate('/dashbord')} color="gray" size="lg" className="mt-6 cursor-pointer" fullWidth>
+          <Button onClick={() => navigate('/ddash')} color="gray" size="lg" className="mt-6 cursor-pointer" fullWidth>
             sign in
           </Button>
           <div className="!mt-4 flex justify-end">
@@ -79,35 +79,13 @@ export function Login() {
               href="#"
               color="blue-gray"
               variant="small"
-              className="font-medium text-red-700"
+              className="font-medium pb-3 text-red-700"
               onClick={() => navigate('/send')}
             >
               Forgot password?
             </Typography>
           </div>
-          <Button
-            variant="outlined"
-            size="lg"
-            className=" cursor-pointer mt-6 flex h-12 items-center justify-center gap-2"
-            fullWidth
-          >
-            <img
-              src={`https://www.material-tailwind.com/logos/logo-google.png`}
-              alt="google"
-              className="h-6 w-6"
-            />{" "}
-            sign in with google
-          </Button>
-          <Typography
-            variant="small"
-            color="gray"
-            className="!mt-4 text-center font-normal"
-          >
-            Not registered?{" "}
-            <a onClick={() => navigate('/register')} className=" cursor-pointer font-medium text-gray-900">
-              Create account
-            </a>
-          </Typography>
+
         </form>
       </div>
     </section>
@@ -115,4 +93,4 @@ export function Login() {
   );
 }
 
-export default Login;
+export default DLogin;

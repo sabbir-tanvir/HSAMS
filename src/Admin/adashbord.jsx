@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button } from "@material-tailwind/react";
+import Dimage from '../assets/p.jpg'
 
 export function Manage() {
     const [activeTab, setActiveTab] = useState('online'); // 'online' or 'seat'
@@ -127,7 +128,7 @@ export function Manage() {
                         className='w-10 h-10 rounded-full overflow-hidden hover:bg-gray-100 p-0.5 focus:outline-none profile-menu cursor-pointer'
                     >
                         <img
-                            src="/path-to-your-admin-image.jpg"
+                            src={Dimage}
                             alt="Admin"
                             className='w-full h-full rounded-full object-cover'
                         />
@@ -138,7 +139,7 @@ export function Manage() {
                         <div className='absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg z-50 py-4 profile-dropdown'>
                             <div className='flex flex-col items-center justify-center px-6 pb-4 border-b'>
                                 <img
-                                    src="/path-to-your-admin-image.jpg"
+                                    src={Dimage}
                                     alt="Admin"
                                     className='w-24 h-24 border rounded-full mb-4 cursor-pointer'
                                 />

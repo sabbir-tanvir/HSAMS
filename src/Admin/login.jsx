@@ -80,6 +80,7 @@ export function Loginn() {
               color="blue-gray"
               variant="small"
               className="font-medium pb-3 text-red-700"
+              onClick={() => navigate('/send')}
             >
               Forgot password?
             </Typography>

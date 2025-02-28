@@ -12,6 +12,8 @@ import Reset from './Login/reset';
 import Send from './Login/send';
 import { Loginn } from './Admin/login';
 import { Manage } from './Admin/adashbord';
+import { DLogin } from './doctor/login'
+import { Doctor } from './doctor/doctor'
 
 
 
@@ -31,6 +33,8 @@ function App() {
           <Route path="/send" element={<Send />} />
           <Route path="/admin" element={<Loginn />} />
           <Route path="/manage" element={<Manage />} />
+          <Route path="/doctor" element={<DLogin />} />
+          <Route path='ddash' element={ < Doctor />} />
 
         </Routes>
       </div>
