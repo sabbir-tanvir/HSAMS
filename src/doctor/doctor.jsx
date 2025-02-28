@@ -78,6 +78,17 @@ export function Doctor() {
             contact: "+1234567892",
             email: "emily@example.com",
             status: "Stable"
+        },
+        {
+            id: 4,
+            name: "Emily Davis",
+            age: 35,
+            condition: "Arrhythmia",
+            lastVisit: "2024-03-10",
+            nextVisit: "2024-04-10",
+            contact: "+1234567892",
+            email: "emily@example.com",
+            status: "Stable"
         }
     ];
 
@@ -273,7 +284,7 @@ export function Doctor() {
                 return (
                     <>
                         <h2 className="text-2xl font-semibold mb-4">My Patients</h2>
-                        <div className="grid grid-cols-1 gap-4">
+                        <div className="grid grid-cols-1 pb-15 gap-4">
                             {myPatients.map((patient) => (
                                 <div key={patient.id} className="bg-white rounded-lg shadow-md p-6">
                                     <div className="flex justify-between items-start mb-4">
@@ -480,9 +491,9 @@ export function Doctor() {
     }, [showProfileMenu]);
 
     return (
-        <div className='flex flex-col min-h-screen bg-[#f1f3f4]'>
-            {/* Top Navigation - Google Classroom style */}
-            <nav className='flex items-center justify-between w-full bg-white px-4 py-2 border-b'>
+        <div className='flex flex-col h-screen overflow-hidden'>
+            {/* Top Navigation - Fixed */}
+            <nav className='flex items-center justify-between w-full bg-white px-4 py-2 border-b fixed top-0 left-0 right-0 z-10'>
                 <div className='flex items-center'>
                     <h1 className='text-2xl font-medium'>Doctor Dashboard</h1>
                 </div>
@@ -523,10 +534,11 @@ export function Doctor() {
                 </div>
             </nav>
 
-            <div className='flex flex-1'>
-                {/* Left Sidebar */}
-                <div className='w-64 bg-white min-h-screen p-4 border-r'>
-                    <div className='space-y-1'>
+            {/* Main container below fixed navbar */}
+            <div className='flex pt-[48px] h-full'>
+                {/* Left Sidebar - Fixed */}
+                <div className='w-64 bg-white h-full fixed left-0 border-r overflow-y-auto'>
+                    <div className='space-y-1 p-4'>
                         {navItems.map((item) => (
                             <button
                                 key={item.id}
@@ -555,7 +567,7 @@ export function Doctor() {
                     </div>
 
                     {/* Quick Stats */}
-                    <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+                    <div className="mx-4 p-4 bg-gray-50 rounded-lg">
                         <h3 className="text-sm font-medium text-gray-700 mb-3">Today's Overview</h3>
                         <div className="space-y-3">
                             <div className="flex justify-between items-center">
@@ -574,10 +586,12 @@ export function Doctor() {
                     </div>
                 </div>
                 
-                {/* Main Content */}
-                <div className="flex-1 p-6">
-                    <div className="space-y-6">
-                        {renderContent()}
+                {/* Main Content - Scrollable */}
+                <div className="flex-1 ml-64 bg-[#f1f3f4] overflow-y-auto min-h-screen">
+                    <div className="p-6">
+                        <div className="space-y-6">
+                            {renderContent()}
+                        </div>
                     </div>
                 </div>
             </div>
