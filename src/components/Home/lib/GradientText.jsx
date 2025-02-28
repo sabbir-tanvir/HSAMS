@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './GradientText.css';
+import '../../../styles/GradientText.css';
 
 export default function GradientText({
   children,

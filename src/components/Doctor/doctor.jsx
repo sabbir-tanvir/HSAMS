@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Dimage from '../assets/p.jpg'
+import Dimage from '../../assets/images/p.jpg'
 import { Button } from "@material-tailwind/react";
 import { 
     CalendarDaysIcon,

@@ -1,5 +1,5 @@
 import { Hospital } from 'lucide-react';
-import './about.css'
+import '../../../styles/about.css'
 
 
 export function About() {

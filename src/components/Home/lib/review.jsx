@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
-import './review.css'
+import '../../../styles/review.css'
 
 
 const testimonials = [

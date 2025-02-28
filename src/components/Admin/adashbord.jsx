@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Input, Button } from "@material-tailwind/react";
-import Dimage from '../assets/p.jpg'
+import Dimage from '../../assets/images/p.jpg'
 
 export function Manage() {
     const [activeTab, setActiveTab] = useState('online'); // 'online' or 'seat'

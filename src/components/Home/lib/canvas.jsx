@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './canvas.css';
+import '../../../styles/canvas.css';
 
 export  function Canvas () {
 

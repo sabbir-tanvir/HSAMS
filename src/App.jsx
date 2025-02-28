@@ -1,19 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Login } from './components/login'
-import { RegisterUser } from './components/registration'
-import Home from './components/home' // Correctly import the Hero component
-import Payment from './components/payment'
-import  Footer  from './lib/footer'
-import { Canvas } from './lib/canvas' // Correct the import path
-import { Dashbord } from './components/dashbord'
+import { Login } from './components/Auth/login'
+import { RegisterUser } from './components/Auth/registration'
+import Home from './components/Home/home' // Correctly import the Hero component
+import Payment from './components/Payment/payment'
+import  Footer  from './components/Home/lib/footer'
+import { Canvas } from './components/Home/lib/canvas' // Correct the import path
+import { Dashbord } from './components/Home/dashbord'
 import './styles.css';
-import Reset from './Login/reset';
-import Send from './Login/send';
-import { Loginn } from './Admin/login';
-import { Manage } from './Admin/adashbord';
-import { DLogin } from './doctor/login'
-import { Doctor } from './doctor/doctor'
+import Reset from './components/Auth/reset';
+import Send from './components/Auth/send';
+import { Loginn } from './components/Admin/login';
+import { Manage } from './components/Admin/adashbord';
+import { DLogin } from './components/Doctor/login';
+import { Doctor } from './components/Doctor/doctor';
 
 
 

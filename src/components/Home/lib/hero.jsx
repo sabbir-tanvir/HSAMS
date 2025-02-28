@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import heroImage from "../assets/m.png";
+import heroImage from "../../../assets/images/m.png";
 import GradientText from "./GradientText";
-import { FaIdCardAlt, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Canvas from '../lib/canvas'; // Correct import path
+import Canvas from './canvas'; // Correct import path
 import { Progress, Typography } from "@material-tailwind/react";
 
 
