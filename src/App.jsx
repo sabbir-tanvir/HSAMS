@@ -9,9 +9,7 @@ import { Dashbord } from './components/Home/dashbord'
 import './styles.css';
 import Reset from './components/Auth/reset';
 import Send from './components/Auth/send';
-import { Loginn } from './components/Admin/login';
 import { Manage } from './components/Admin/adashbord';
-import { DLogin } from './components/Doctor/login';
 import { Doctor } from './components/Doctor/doctor';
 
 
@@ -29,10 +27,8 @@ function App() {
           <Route path="/dashbord" element={<Dashbord />} />
           <Route path="/reset" element={<Reset />} />
           <Route path="/send" element={<Send />} />
-          <Route path="/admin" element={<Loginn />} />
-          <Route path="/manage" element={<Manage />} />
-          <Route path="/doctor" element={<DLogin />} />
-          <Route path='ddash' element={ < Doctor />} />
+          <Route path="/admin" element={<Manage />} />
+          <Route path='/doctor' element={ < Doctor />} />
 
         </Routes>
       </div>

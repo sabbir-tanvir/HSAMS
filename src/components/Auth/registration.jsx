@@ -3,54 +3,94 @@ import { Typography, Input, Button } from "@material-tailwind/react";
 
 export function RegisterUser() {
     return (
-        <div className="bg-gray-100  h-screen flex items-center justify-center">
+        <div className="bg-gray-100 h-screen flex items-center justify-center">
             <div className="max-w-md w-full bg-white p-8 rounded-2xl shadow-md">
                 <Typography variant="h3" color="blue-gray" className="mb-2 text-center">
                     Sign Up
                 </Typography>
                 <form>
                     <div className="mb-4">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                             Name
                             <i className="mx-2 fa fa-solid fa-user"></i>
                         </label>
-                        <Input type="text" id="name" name="name" placeholder="Enter your name" className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200" />
+                        <Input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            placeholder="Enter your name" 
+                            variant="outlined"
+                            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none"
+                            }}
+                            containerProps={{
+                                className: "min-w-full"
+                            }}
+                        />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                             Email
                             <i className="fa-solid fa-envelope mx-2"></i>
                         </label>
-                        <Input type="email" id="email" name="email" placeholder="Enter your email" className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200" />
+                        <Input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="Enter your email" 
+                            variant="outlined"
+                            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none"
+                            }}
+                            containerProps={{
+                                className: "min-w-full"
+                            }}
+                        />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
                             Password
                             <i className="fa-solid fa-lock mx-2"></i>
                         </label>
-                        <Input type="password" id="password" name="password" placeholder="Enter your password" className="w-full placeholder:opacity-100 focus:border-t-primary border-t-blue-gray-200" />
+                        <Input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Enter your password" 
+                            variant="outlined"
+                            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none"
+                            }}
+                            containerProps={{
+                                className: "min-w-full"
+                            }}
+                        />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="pfp" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="pfp" className="block text-sm font-medium text-gray-700 mb-1">
                             Picture
                             <i className="fa-solid fa-image mx-2"></i>
                         </label>
-                        <div className="relative">
-                            <Input
-                                type="file" 
-                                id="pfp" 
-                                name="pfp"  
-                                className="w-full !border-t-blue-gray-200 focus:!border-t-primary"
-                                variant="standard"
-                                accept="image/*"
-                                containerProps={{
-                                    className: "min-w-full"
-                                }}
-                            />
-                        </div>
+                        <Input
+                            type="file" 
+                            id="pfp" 
+                            name="pfp"  
+                            variant="outlined"
+                            className="!border-t-blue-gray-200 focus:!border-t-gray-900"
+                            labelProps={{
+                                className: "before:content-none after:content-none"
+                            }}
+                            containerProps={{
+                                className: "min-w-full"
+                            }}
+                            accept="image/*"
+                        />
                     </div>
                     <div className="mb-4">
-                        <label htmlFor="location" className="block text-sm font-medium text-gray-700">
+                        <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
                             Location
                             <i className="fa-solid fa-location-dot mx-2"></i>
                         </label>
@@ -60,7 +100,7 @@ export function RegisterUser() {
                                 width="100%" height="200" style={{ border: 0 }} loading="lazy" className="rounded">
                             </iframe>
                         </div>
-                        <Button type="submit" fullWidth className=" cursor-pointer mt-6 h-12 items-center justify-center gap-2 transition duration-200">
+                        <Button type="submit" fullWidth className="cursor-pointer mt-6 h-12 items-center justify-center gap-2 transition duration-200 bg-blue-500 hover:bg-blue-600 text-white">
                             SignUp
                         </Button>
                     </div>

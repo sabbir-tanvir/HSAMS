@@ -14,13 +14,13 @@ export function Login() {
     // Navigate based on role
     switch(role) {
       case "admin":
-        navigate('/manage');
+        navigate('/admin');
         break;
       case "doctor":
-        navigate('/ddash');
+        navigate('/doctor');
         break;
       case "user":
-        navigate('/');
+        navigate('/dashbord');
         break;
       default:
         navigate('/');
