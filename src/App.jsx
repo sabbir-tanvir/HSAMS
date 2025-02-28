@@ -4,7 +4,6 @@ import { Login } from './components/Auth/login'
 import { RegisterUser } from './components/Auth/registration'
 import Home from './components/Home/home' // Correctly import the Hero component
 import Payment from './components/Payment/payment'
-import  Footer  from './components/Home/lib/footer'
 import { Canvas } from './components/Home/lib/canvas' // Correct the import path
 import { Dashbord } from './components/Home/dashbord'
 import './styles.css';
@@ -26,7 +25,6 @@ function App() {
           <Route path="/register" element={<RegisterUser />} />
           <Route path="/" element={<Home />} /> {/* Use Hero component */}
           <Route path="/payment" element={<Payment />} />
-          <Route path="/footer" element={<Footer />} />
           <Route path="/canvas" element={<Canvas />} />
           <Route path="/dashbord" element={<Dashbord />} />
           <Route path="/reset" element={<Reset />} />
