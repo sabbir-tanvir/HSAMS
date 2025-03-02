@@ -156,6 +156,20 @@ export function Manage() {
                 quantity: 2000,
                 expiryDate: "2024-12-31",
                 status: "In Stock"
+            },
+            {
+                id: 2,
+                name: "Amoxicillin",
+                quantity: 500,
+                expiryDate: "2023-06-30",
+                status: "In Stock"
+            },
+            {
+                id: 3,
+                name: "Ibuprofen",
+                quantity: 1000,
+                expiryDate: "2023-12-31",
+                status: "In Stock"
             }
         ]
     };
