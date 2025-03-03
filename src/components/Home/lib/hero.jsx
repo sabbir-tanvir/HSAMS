@@ -562,8 +562,8 @@ export function Hero() {
               />
             </div>
             <button className="relative w-full sm:w-auto inline-block font-medium group py-3 px-6">
-              <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-              <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+              <span className="absolute inset-0 w-full h-full transition duration-400 rounded-lg ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+              <span className="absolute inset-0 w-full h-full bg-white border rounded-lg border-indigo-600 group-hover:bg-indigo-50"></span>
               <span className="relative text-indigo-600 font-medium">Search</span>
             </button>
           </form>
