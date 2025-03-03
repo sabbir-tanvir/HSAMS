@@ -54,13 +54,13 @@ const OnlineBookingForm = ({ toggleModal }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4" onClick={toggleModal}>
       <div
         className="w-full max-w-3xl rounded-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-6 bg-gradient-to-r from-red-700 to-red-700 rounded-t-lg">
-          <h2 className="text-2xl font-bold text-white">
+        <div className="flex items-center justify-between p-4 sm:p-6 bg-gradient-to-r from-red-700 to-red-700 rounded-t-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-white">
             Schedule Your Consultation
           </h2>
           <button
@@ -73,14 +73,14 @@ const OnlineBookingForm = ({ toggleModal }) => {
           </button>
         </div>
 
-        <div className="p-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="p-4 sm:p-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Personal Information
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
                   <label
                     htmlFor="name"
@@ -132,10 +132,10 @@ const OnlineBookingForm = ({ toggleModal }) => {
 
             {/* Contact & Schedule */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Contact & Schedule
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
                   <label
                     htmlFor="phone"
@@ -187,10 +187,10 @@ const OnlineBookingForm = ({ toggleModal }) => {
 
             {/* Department & Doctor Selection */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Medical Preferences
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
                   <label
                     htmlFor="department"
@@ -300,13 +300,13 @@ const OfflineBookingForm = ({ toggleModal }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={toggleModal}>
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4" onClick={toggleModal}>
       <div
         className="w-full max-w-3xl rounded-2xl mx-auto bg-gradient-to-br from-white to-gray-50 shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-t-lg">
-          <h2 className="text-2xl font-bold text-white">
+        <div className="flex items-center justify-between p-4 sm:p-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-t-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-white">
             Schedule Your Appointment
           </h2>
           <button
@@ -318,11 +318,11 @@ const OfflineBookingForm = ({ toggleModal }) => {
             <XMarkIcon className="h-5 w-5" />
           </button>
         </div>
-        <div className="p-6">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="p-4 sm:p-6">
+          <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Personal Information */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Personal Information
               </h3>
               <div className="relative">
@@ -351,10 +351,10 @@ const OfflineBookingForm = ({ toggleModal }) => {
 
             {/* Contact & Schedule */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Contact & Schedule
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
                   <label
                     htmlFor="phone"
@@ -406,10 +406,10 @@ const OfflineBookingForm = ({ toggleModal }) => {
 
             {/* Department & Doctor */}
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">
                 Medical Preferences
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="relative">
                   <label
                     htmlFor="department"
@@ -520,10 +520,10 @@ export function Hero() {
   const toggleModal = () => setBookingType(null);
 
   return (
-    <main className="relative z-10 h-screen  shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] pt-24">
-      <section className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ml-4 px-4 md:px-8">
+    <main className="relative z-10 min-h-screen shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] pt-6 sm:pt-12 md:pt-24 overflow-hidden">
+      <section className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 px-4 sm:px-8">
         {/* Left Column: Text & Controls */}
-        <div className="flex flex-col w-5/6 text-center justify-center">
+        <div className="flex flex-col w-full md:w-5/6 text-left sm:text-center justify-center order-2 lg:order-1 mt-4 sm:mt-0">
           <GradientText
             colors={[
               "#40ffaa",
@@ -536,51 +536,40 @@ export function Hero() {
             showBorder={false}
             className="custom-class"
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 leading-tight">
               Find a Best Hospital <br className="hidden sm:block" /> That
               changes life.
             </h1>
           </GradientText>
-          <p className="text-gray-700 mb-6 sm:mb-8">
+          <p className="text-gray-700 text-base mb-5 sm:mb-8 max-w-md">
             Find a Best Hospital that changes life. Explore our listings to find
             specialized treatments, patient reviews, and more near you.
           </p>
           {/* Search Bar */}
-          <form className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
-            <input
-              type="text"
-              placeholder="Symptoms"
-              className="w-full sm:w-auto flex-1 border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            <input
-              type="text"
-              placeholder="Hospital Location"
-              className="w-full sm:w-auto flex-1 border border-gray-300 rounded py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-            {/* <button
-              type="submit"
-              className="bg-blue-500 text-white px-5 py-2 rounded hover:bg-blue-600 transition-colors w-full sm:w-auto"
-            >
-              Search
-            </button> */}
-
-            {/* <button class="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-indigo-100 rounded hover:bg-white group py-1.5 px-2.5">
-              <span class="w-56 h-48 rounded bg-indigo-600 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-              <span class="relative w-full text-left text-indigo-600 transition-colors duration-300 ease-in-out group-hover:text-white">Button Hover</span>
-            </button> */}
-
-            <button className="relative inline-block font-medium group py-2 px-5 ">
+          <form className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-2 mb-6">
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="Symptoms"
+                className="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="w-full">
+              <input
+                type="text"
+                placeholder="Hospital Location"
+                className="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <button className="relative w-full sm:w-auto inline-block font-medium group py-3 px-6">
               <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
               <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-              <span className="relative text-indigo-600 ">. Search .</span>
+              <span className="relative text-indigo-600 font-medium">Search</span>
             </button>
-
-
-
           </form>
 
           <div className={`${bookingType ? "overflow-hidden" : ""}`}>
-            <div className="mx-auto">
+            <div className="mx-auto w-full">
               {/* Modal Forms */}
               {bookingType === "offline" && (
                 <OfflineBookingForm toggleModal={toggleModal} />
@@ -590,37 +579,28 @@ export function Hero() {
               )}
 
               {/* Simplified Hospital Info with two Booking Buttons */}
-              <div className="bg-white p-4 rounded-lg shadow-xl">
-                <h2 className="text-2xl font-bold mb-1">
+              <div className="bg-white p-5 rounded-xl shadow-xl border border-gray-100">
+                <h2 className="text-xl sm:text-2xl font-bold mb-2">
                   {hospitalInfo.name}
                 </h2>
-                <p className="text-gray-700 mb-4">{hospitalInfo.address}</p>
-                <div className="flex gap-4 justify-center">
-                  {/* <button
-                    
-                    className="flex-1 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 transition"
-                  > */}
-                  <button onClick={() => setBookingType("online")} className="relative inline-block font-medium group py-1.5 px-2.5 ">
-                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                    <span className="absolute inset-0 w-full h-full bg-white border border-red-600 group-hover:bg-red-50"></span>
-                    <span className="relative text-red-600 ">Online Booking</span>
-                  </button>
-                  {/* Online Booking
-                  </button> */}
-                  {/* <button
-                    onClick={() => setBookingType("offline")}
-                    className="flex-1 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition"
+                <p className="text-gray-700 text-sm sm:text-base mb-5">{hospitalInfo.address}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <button 
+                    onClick={() => setBookingType("online")} 
+                    className="relative w-full inline-block font-medium group py-3 px-4 rounded-lg"
                   >
-                    Offline Booking
-                  </button> */}
-                  <button onClick={() => setBookingType("offline")} className="relative inline-block font-medium group py-1.5 px-2.5 ">
-                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                    <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-                    <span className="relative text-indigo-600 ">Offline Booking</span>
+                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span className="absolute inset-0 w-full h-full bg-white border border-red-600 rounded-lg group-hover:bg-red-50"></span>
+                    <span className="relative text-red-600 font-medium">Online Booking</span>
                   </button>
-
-
-
+                  <button 
+                    onClick={() => setBookingType("offline")} 
+                    className="relative w-full inline-block font-medium group py-3 px-4 rounded-lg"
+                  >
+                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                    <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 rounded-lg group-hover:bg-indigo-50"></span>
+                    <span className="relative text-indigo-600 font-medium">Offline Booking</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -628,11 +608,15 @@ export function Hero() {
         </div>
 
         {/* Right Column: Hero Image */}
-        <div className="flex justify-center items-center md:mt-0">
-          <div className="absolute overflow-hidden top-0 right-0 w-1/2 h-full">
+        <div className="flex justify-center items-center order-1 lg:order-2 relative">
+          <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0">
             <Canvas />
           </div>
-          <img src={heroImage} alt="Hero" className="w-[600px] z-1 h-auto" />
+          <img 
+            src={heroImage} 
+            alt="Hero" 
+            className="w-full max-w-[300px] md:max-w-[450px] lg:max-w-[600px] z-10 h-auto relative mx-auto" 
+          />
         </div>
       </section>
     </main>
