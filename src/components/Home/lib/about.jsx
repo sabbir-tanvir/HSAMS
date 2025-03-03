@@ -22,7 +22,7 @@ export function About() {
           <span data-hover="About">About</span>
           </h2>
 
-        <div className="pt-3 sm:pt-10 md:pt-12">
+        <div className="pt-10 sm:pt-16 md:pt-12">
           <p className="mb-2 font-semibold text-gray-900 text-base sm:text-xl/9">Welcome to our hospital seat finder website. We are dedicated to providing the best healthcare services to our community.</p>
           <p className="mb-2 font-semibold text-gray-900 text-base sm:text-xl/9">Our team of experienced professionals is here to ensure you receive the highest quality care and find available seats quickly and efficiently.</p>
           <p className="mb-2 font-semibold text-gray-900 text-base sm:text-xl/9">Thank you for choosing our hospital seat finder for your healthcare needs.</p>
