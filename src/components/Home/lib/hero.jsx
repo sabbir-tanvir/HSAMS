@@ -608,14 +608,14 @@ export function Hero() {
         </div>
 
         {/* Right Column: Hero Image */}
-        <div className="flex justify-center items-center order-1 lg:order-2 relative">
+        <div className="flex justify-center md:pt-15 items-center order-1 lg:order-2 relative">
           <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0">
             <Canvas />
           </div>
           <img 
             src={heroImage} 
             alt="Hero" 
-            className="w-full max-w-[300px] md:max-w-[450px] lg:max-w-[600px] z-10 h-auto relative mx-auto" 
+            className="w-full max-w-[250px] md:max-w-[450px] md:mt-15 lg:max-w-[600px] z-10 h-auto relative mx-auto mt-10" 
           />
         </div>
       </section>
