@@ -257,9 +257,12 @@ const OnlineBookingForm = ({ toggleModal }) => {
               <button
                 type="submit"
                 onClick={() => navigate('/payment')}
-                className="w-full bg-gradient-to-r from-red-500 to-red-500 hover:from-red-700 hover:to-red-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                className="relative inline-block w-full  text-lg font-semibold group py-5 px-3  rounded-lg  "
               >
-                Pay to Book Appointment
+                <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border border-red-600 rounded-lg group-hover:bg-red-50"></span>
+                <span className="relative text-red-600 font-medium ">Pay to Book Appointment</span>
+
               </button>
             </div>
           </form>
@@ -474,29 +477,32 @@ const OfflineBookingForm = ({ toggleModal }) => {
 
 
 
-                <div className="w-full relative">
-                  <div className="mb-2 flex items-center justify-between gap-4">
-                    <Typography color="blue-gray" variant="h6">
-                      Serial
-                    </Typography>
-                    <Typography color="blue-gray"  variant="h6">
-                      10/50
-                    </Typography>
-                  </div>
-                  <Progress className=" bg-gray-200" color="blue" value={10} />
+              <div className="w-full relative">
+                <div className="mb-2 flex items-center justify-between gap-4">
+                  <Typography color="blue-gray" variant="h6">
+                    Serial
+                  </Typography>
+                  <Typography color="blue-gray" variant="h6">
+                    10/50
+                  </Typography>
                 </div>
-
-
-
+                <Progress className=" bg-gray-200" color="blue" value={10} />
               </div>
+
+
+
+            </div>
 
 
             <div className="pt-4">
               <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-6 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                className="relative inline-block w-full  text-lg font-semibold group py-5 px-3  rounded-lg  "
               >
-                Book Appointment
+                <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 rounded-lg group-hover:bg-indigo-50"></span>
+                <span className="relative text-indigo-600 font-medium  ">Book Appointment</span>
+
+
               </button>
             </div>
           </form>
@@ -584,7 +590,7 @@ export function Hero() {
                   {hospitalInfo.name}
                 </h2>
                 <p className="text-gray-700 text-sm sm:text-base mb-5">{hospitalInfo.address}</p>
-                
+
                 {/* Modified button layout for responsive design */}
                 <div className="space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-4">
                   {/* Online Booking Option */}
@@ -593,8 +599,8 @@ export function Hero() {
                       <h3 className="font-medium text-red-600">Online Booking</h3>
                       <p className="text-xs text-gray-500">Book from anywhere</p>
                     </div>
-                    <button 
-                      onClick={() => setBookingType("online")} 
+                    <button
+                      onClick={() => setBookingType("online")}
                       className="relative inline-block font-medium group py-2 px-3 sm:py-3 sm:px-4 rounded-lg sm:w-full"
                     >
                       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -603,15 +609,15 @@ export function Hero() {
                       <span className="relative text-red-600 font-medium sm:hidden">Book</span>
                     </button>
                   </div>
-                  
+
                   {/* Offline Booking Option */}
                   <div className="flex items-center justify-between sm:block">
                     <div className="flex-1 mr-3 sm:hidden">
                       <h3 className="font-medium text-indigo-600">Offline Booking</h3>
                       <p className="text-xs text-gray-500">Visit in-person</p>
                     </div>
-                    <button 
-                      onClick={() => setBookingType("offline")} 
+                    <button
+                      onClick={() => setBookingType("offline")}
                       className="relative inline-block font-medium group py-2 px-3 sm:py-3 sm:px-4 rounded-lg sm:w-full"
                     >
                       <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -631,10 +637,10 @@ export function Hero() {
           <div className="absolute top-0 right-0 w-full h-full overflow-hidden z-0">
             <Canvas />
           </div>
-          <img 
-            src={heroImage} 
-            alt="Hero" 
-            className="w-full max-w-[250px] md:max-w-[450px] md:mt-15 lg:max-w-[600px] z-10 h-auto relative mx-auto mt-10" 
+          <img
+            src={heroImage}
+            alt="Hero"
+            className="w-full max-w-[250px] md:max-w-[450px] md:mt-5 lg:max-w-[600px] z-10 h-auto relative mx-auto mt-10"
           />
         </div>
       </section>
