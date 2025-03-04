@@ -10,15 +10,15 @@ export function Header2() {
 
     return (
         <div className={isModalOpen ? "blurred" : ""}>
-            <header className="absolute top-0 left-0 pr-4 pl-4 w-full z-50">
-                <nav className="container mx-auto flex items-center justify-between gap-30 py-6 px-4 md:px-8">
-                    <div className='w-3/6 justify-between items-center flex'>
+            <header className="absolute top-0 left-0 w-full z-50">
+                <nav className="container mx-auto flex items-center justify-between py-6 px-4 md:px-8">
+                    <div className='flex-1 flex items-center'>
                         {/* Logo or Brand Name */}
                         <div className="text-2xl font-bold text-gray-800">
                             MediSeat
                         </div>
                         {/* Nav Links (hidden on small screens, shown on md and up) */}
-                        <ul className="hidden md:flex items-center space-x-8 text-gray-600">
+                        <ul className="hidden md:flex items-center ml-10 space-x-8 text-gray-600">
                             <li>
                                 <a href="#home" className="hover:text-blue-500 transition-colors">
                                     Home
@@ -36,9 +36,9 @@ export function Header2() {
                             </li>
                         </ul>
                     </div>
-                    <div className="w-3/6 flex justify-end items-center text-right">
+                    <div className="flex items-center justify-end">
                         {/* Auth Buttons (Sign In / Sign Up) */}
-                        <div className="md:flex items-center space-x-4">
+                        <div className="flex items-center">
                             <div 
                                 className="w-10 h-10 rounded-full border border-black flex items-center justify-center cursor-pointer"
                                 onClick={toggleModal}
@@ -47,7 +47,6 @@ export function Header2() {
                             </div>
                         </div>
                     </div>
-                    {/* Mobile Menu Toggle (hamburger) */}
                 </nav>
                 {isModalOpen && <UserProfileModal toggleModal={toggleModal} />}
             </header>

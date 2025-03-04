@@ -584,23 +584,42 @@ export function Hero() {
                   {hospitalInfo.name}
                 </h2>
                 <p className="text-gray-700 text-sm sm:text-base mb-5">{hospitalInfo.address}</p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <button 
-                    onClick={() => setBookingType("online")} 
-                    className="relative w-full inline-block font-medium group py-3 px-4 rounded-lg"
-                  >
-                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                    <span className="absolute inset-0 w-full h-full bg-white border border-red-600 rounded-lg group-hover:bg-red-50"></span>
-                    <span className="relative text-red-600 font-medium">Online Booking</span>
-                  </button>
-                  <button 
-                    onClick={() => setBookingType("offline")} 
-                    className="relative w-full inline-block font-medium group py-3 px-4 rounded-lg"
-                  >
-                    <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-                    <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 rounded-lg group-hover:bg-indigo-50"></span>
-                    <span className="relative text-indigo-600 font-medium">Offline Booking</span>
-                  </button>
+                
+                {/* Modified button layout for responsive design */}
+                <div className="space-y-4 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-4">
+                  {/* Online Booking Option */}
+                  <div className="flex items-center justify-between sm:block">
+                    <div className="flex-1 mr-3 sm:hidden">
+                      <h3 className="font-medium text-red-600">Online Booking</h3>
+                      <p className="text-xs text-gray-500">Book from anywhere</p>
+                    </div>
+                    <button 
+                      onClick={() => setBookingType("online")} 
+                      className="relative inline-block font-medium group py-2 px-3 sm:py-3 sm:px-4 rounded-lg sm:w-full"
+                    >
+                      <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-red-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                      <span className="absolute inset-0 w-full h-full bg-white border border-red-600 rounded-lg group-hover:bg-red-50"></span>
+                      <span className="relative text-red-600 font-medium hidden sm:inline">Online Booking</span>
+                      <span className="relative text-red-600 font-medium sm:hidden">Book</span>
+                    </button>
+                  </div>
+                  
+                  {/* Offline Booking Option */}
+                  <div className="flex items-center justify-between sm:block">
+                    <div className="flex-1 mr-3 sm:hidden">
+                      <h3 className="font-medium text-indigo-600">Offline Booking</h3>
+                      <p className="text-xs text-gray-500">Visit in-person</p>
+                    </div>
+                    <button 
+                      onClick={() => setBookingType("offline")} 
+                      className="relative inline-block font-medium group py-2 px-3 sm:py-3 sm:px-4 rounded-lg sm:w-full"
+                    >
+                      <span className="absolute inset-0 w-full h-full transition duration-400 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 rounded-lg group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+                      <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 rounded-lg group-hover:bg-indigo-50"></span>
+                      <span className="relative text-indigo-600 font-medium hidden sm:inline">Offline Booking</span>
+                      <span className="relative text-indigo-600 font-medium sm:hidden">Book</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

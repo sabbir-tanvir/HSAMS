@@ -4,7 +4,7 @@ export function Header() {
     const navigate = useNavigate();
     return (
         <header className="absolute top-0 left-0 pr-4 pl-4 w-full z-50">
-            <nav className="container mx-auto flex items-center justify-between gap-30 py-6 px-4 md:px-8">
+            <nav className="container mx-auto flex items-center justify-between gap-26 py-6 px-4 md:px-8">
                 <div className='w-3/6 justify-between items-center flex'>
                     {/* Logo or Brand Name */}
                     <div className="text-2xl font-bold text-gray-800">
